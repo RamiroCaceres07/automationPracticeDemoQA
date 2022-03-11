@@ -1,5 +1,6 @@
 package pages;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +21,9 @@ public class BasePage {
     protected static Actions action;
     protected static JavascriptExecutor js;
 
+
     static {
+        System.setProperty("webdriver.chrome.driver", "/Users/ramirocaceres/AutomationDriver/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -67,7 +71,6 @@ public class BasePage {
     public static void writeText(String locator, String textToWrite) {
         find(locator).clear();
         find(locator).sendKeys(textToWrite);
-
     }
 
     public static void writeEnter(String locator){
@@ -96,9 +99,7 @@ public class BasePage {
         js.executeScript("window.scrollBy(0,250)", "");
     }
 
-    public static void scrollWeb350() {
-        js.executeScript("window.scrollBy(0,350)", "");
-    }
+
 
 
     public void selectFromDropdownByText(String locator, String textToSelect) {

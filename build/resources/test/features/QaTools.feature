@@ -4,14 +4,28 @@
 
     Background: Go to page
       Given I navigate to QaTools.com
-      When Scroll Window
-      And Click on Elements
-      When Scroll to Web Tables
-      When Scroll Web 350
+      When Scroll Web
 
+   @WebTables
+   Scenario: As Test Engineer, test web tables
+
+     And Click on Elements
+     When Scroll Web
+     And Click on Web Tables
+     When Scroll Web
+     And Click on Add button
+     When Enter Ramiro first name
+     And Enter Cáceres last name
+     When Enter ramirocaba07@gmail.com email
+     And Enter 18 age
+     When Enter 1999 salary
+     And Enter departament departament
+     When Click on Summit
+     Then Check if the info add on the table
 
    @TextBox
     Scenario Outline: As Tester Engineer, i test TextBox funcionality
+      And Click on Elements
       When Click on TextBox button
       And Enter <name> fullname
       And Enter <email> email
@@ -30,39 +44,30 @@
 
  @RadioButton
  Scenario: As Test Engineer, test radio button funcionality
+   When Click on Elements
    And Click on Radio Button
    When Click on yes selector
+   And Scroll Web
    Then Check is yes is selected
    And Click on impressive
    Then Check is impressive is selected
 
- @WebTables
-Scenario: As Test Engineer, test web tables
-
-  And Click on Web Tables
-  When Scroll to Add
-  And Click on Add button
-  When Enter First Name
-  And Enter Last Name
-  When Enter email
-  And Enter age
-  When Enter salary
-  And Enter departament
-  When Click on Summit
-  Then Check if the info add on the table
-
 @Buttons
    Scenario: As Test Engineer, test button funcionality
+  When Click on Elements
+  And Scroll Web
   And Click on Buttons
   When Double click
   And Right click
-  When Scroll
+  When Scroll Web
   And Simple click
   Then Check if its done
 
 @UploadAndDownload
     Scenario: As Test Engineer, test upload and download funcionality
-  When Scroll Web 350
+  And Click on Elements
+  When Scroll Web
+  And Scroll Web
   And Click on Upload and Download
   When Upload file
 
@@ -70,11 +75,11 @@ Scenario: As Test Engineer, test web tables
 @Forms
     Scenario Outline: As Test Engineer, test dynamic properties funcionality
 
-  When Scroll WebMas
+  When Scroll Web
   And Click on Forms
   When Click on Practice From
   And Enter <name> name
-  And Enter <lastName> lastname
+  And Enter <lastName> Last Name
   And Enter <email> emaill
   When Select gender
   And Write <userNumber> user number
@@ -98,6 +103,7 @@ Scenario: As Test Engineer, test web tables
 @BrowserWindows
 Scenario: As Test Engineer, im test windows with selenium
 
+  When Scroll Web
   And Click on Alerts, Frame and Windows
   When Click on Browser Windows
   And Click on New Tab and switch to tab
@@ -139,6 +145,7 @@ Scenario Outline: As Test Engineer, test alerts with selenium
 
   Scenario: As Test Engineer, test acoordian funcionality
 
+  When Scroll Web
   And Click on Widgets
   When Click on Accordian
   And Click on What is Lorem Ipsum
@@ -150,6 +157,7 @@ Scenario Outline: As Test Engineer, test alerts with selenium
 
   Scenario Outline: As Test Engineer, test AutoComplete funcionality
 
+  When Scroll Web
   And Click on Widgets
   When Click on Auto Complete
   And Write colors on Type Multiple color names and press Enter

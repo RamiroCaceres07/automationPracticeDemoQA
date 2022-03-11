@@ -78,8 +78,8 @@ public class QaDemoPage extends BasePage{
 
     //Checkers locators
     private String raw4Locator = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]";
-    private String isDiplayedLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[6]/div[1]";
-    private String getTextYesOrImpressiveLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/p[1]";
+    private String isDiplayedLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[6]/div[1]";
+    private String getTextYesOrImpressiveLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/p[1]";
     private String tableLocatorWebTables = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]";
     private String checkDoubleClickLocator = "//p[@id='doubleClickMessage']";
     private String checkRightClickLocator = "//p[@id='rightClickMessage']";
@@ -99,7 +99,6 @@ public class QaDemoPage extends BasePage{
         scrollWeb();
     }
 
-    public void scrollWindow350(){scrollWeb350();}
 
     public void acceptAlert(){aceptAlert();};
 
@@ -208,31 +207,27 @@ public class QaDemoPage extends BasePage{
         writeText(fullNameLocator,name);
     }
 
-    public void writeName(){
-        writeText(firstNameLocator, "Ramiro" );
+    public void writeName(String firstName){
+        writeText(firstNameLocator, firstName );
     }
 
     public void writeNameVar(String nameVar){writeText(firstNameLocator, nameVar);}
 
-    public void writeLastName(){
-        writeText(lastNameLocator, "Caceres");
+    public void writeLastName(String lastName){
+        writeText(lastNameLocator,  lastName);
     }
 
-    public void writeLastNameVar(String lastNameVar){writeText(lastNameLocator, lastNameVar);}
-
-    public void writeAge(){
-        writeText(ageLocator, "2");
+    public void writeAge(String age){
+        writeText(ageLocator,age );
     }
 
-    public void writeSalary(){
-        writeText(salaryLocator, "22222");
+    public void writeSalary(String salary){
+        writeText(salaryLocator, salary);
     }
 
-    public void writeDepartament(){
-        writeText(departamentLocator, "mdeo");
+    public void writeDepartament(String departament){
+        writeText(departamentLocator, departament);
     }
-
-    public void writeEmailHardcode(){writeText(emailLocator, "ramiro@gmail.com");}
 
     public void writeEmail(String email){
         writeText(emailLocator, email);
@@ -269,10 +264,15 @@ public class QaDemoPage extends BasePage{
     public Boolean isDisplayedList(){
         return elementIsDisplayed(isDiplayedLocator);
     }
+
     public Boolean isDisplayedTableRaw4(){return elementIsDisplayed(raw4Locator);}
+
     public Boolean isDisplayedDoubleClick(){return elementIsDisplayed(checkDoubleClickLocator);}
+
     public Boolean isDisplayedRightClick(){return elementIsDisplayed(checkRightClickLocator);}
+
     public Boolean isDisplayedSimpleClick(){return elementIsDisplayed(checkSimpleClickLocator);}
+
     public String getTextFromButtonYesOrImpressive(){
         return getTextFromElement(getTextYesOrImpressiveLocator);
     }

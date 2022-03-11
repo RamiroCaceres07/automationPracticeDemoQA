@@ -20,10 +20,6 @@ public class QaToolsSteps {
         qaDemoPage.navigateToQaTools();
     }
 
-    @When("^Scroll Window$")
-    public void scrollWindow(){
-        qaDemoPage.scrollWindow();
-    }
 
     @And("^Click on Elements$")
     public void clickOnElements() throws InterruptedException {
@@ -31,54 +27,45 @@ public class QaToolsSteps {
         Thread.sleep(1000);
     }
 
-    @When("^Scroll to Web Tables$")
-    public void scrollWebTables(){
-        qaDemoPage.scrollWindow();
-    }
-
     @And("^Click on Web Tables$")
     public void clickOnWebTables(){
         qaDemoPage.clickOnWebTablesButton();
     }
 
-    @When("^Scroll to Add$")
-    public void scrollWebTablesToAdd(){
-        qaDemoPage.scrollWindow();
-    }
 
     @And("^Click on Add button$")
     public void clickOnAddButton(){
         qaDemoPage.clickOnAddWebTables();
     }
 
-    @When("^Enter First Name$")
-    public void writeFirstName(){
-        qaDemoPage.writeName();
+    @When("^Enter (.+) first name$")
+    public void writeFirstName(String firstName){
+        qaDemoPage.writeName(firstName);
     }
 
-    @And("^Enter Last Name$")
-    public void writeLastName(){
-        qaDemoPage.writeLastName();
+    @And("^Enter (.+) last name$")
+    public void writeLastName(String lastName){
+        qaDemoPage.writeLastName(lastName);
     }
 
-    @When("^Enter email$")
-    public void writeEmail(){
-        qaDemoPage.writeEmailHardcode();
+    @When("^Enter (.+) email$")
+    public void writeEmail(String email){
+        qaDemoPage.writeEmail(email);
     }
 
-    @And("^Enter age$")
-    public void writeAge(){
-        qaDemoPage.writeAge();
+    @And("^Enter (.+) age$")
+    public void writeAge(String age){
+        qaDemoPage.writeAge(age);
     }
 
-    @When("^Enter salary$")
-    public void writeSalary(){
-        qaDemoPage.writeSalary();
+    @When("^Enter (.+) salary$")
+    public void writeSalary(String salary){
+        qaDemoPage.writeSalary(salary);
     }
 
-    @And("^Enter departament$")
-    public void writeDepartament(){
-        qaDemoPage.writeDepartament();
+    @And("^Enter (.+) departament$")
+    public void writeDepartament(String departament){
+        qaDemoPage.writeDepartament(departament);
     }
 
     @When("^Click on Summit$")
@@ -103,10 +90,6 @@ public class QaToolsSteps {
         qaDemoPage.writeFullName(name);
     }
 
-    @And("^Enter (.+) email$")
-    public void writeEmail(String email){
-        qaDemoPage.writeEmail(email);
-    }
 
     @And("^Enter (.+) current address$")
     public void writeCurrentAddress(String currentAddress){
@@ -118,12 +101,6 @@ public class QaToolsSteps {
         qaDemoPage.writePermanentAddress(permanentAddress);
     }
 
-    @When("^Scroll Web$")
-    public void scroll(){
-        qaDemoPage.scrollWindow();
-    }
-
-
     @And("^Click on Sumbit and check information$")
     public void clickOnSumbit() throws InterruptedException {
         sleep(1000);
@@ -133,7 +110,6 @@ public class QaToolsSteps {
     @Then("^Check is displayed$")
     public void checkIsDisplayed(){
         Assert.assertTrue("No aparece", qaDemoPage.isDisplayedList());
-
     }
 
 //@RADIO BUTTON
@@ -186,10 +162,6 @@ public void clickOButton()  {
         qaDemoPage.rightClickOnButton();
     }
 
-    @When("^Scroll$")
-    public void scrollWin(){
-        qaDemoPage.scrollWindow();
-    }
 
     @And("^Simple click$")
     public void simpleClick() {
@@ -207,11 +179,10 @@ public void clickOButton()  {
 
 //@UploadAndDownload
 
-    @When("^Scroll Web 350$")
+    @When("^Scroll Web$")
     public void scroll350(){
-        qaDemoPage.scrollWindow350();
+        qaDemoPage.scrollWindow();
     }
-
 
     @And("^Click on Upload and Download$")
     public void clickOnUploadAndDownload(){
@@ -225,10 +196,6 @@ public void clickOButton()  {
 
 //@Forms
 
-    @When("^Scroll WebMas$")
-    public void scrollMas(){
-        qaDemoPage.scrollWindow350();
-    }
 
     @And("^Click on Forms$")
     public void clickOnForms(){
@@ -245,10 +212,6 @@ public void clickOButton()  {
         qaDemoPage.writeNameVar(name);
     }
 
-    @And("^Enter (.+) lastname$")
-    public void writeLastNamee(String lastName){
-        qaDemoPage.writeLastNameVar(lastName);
-    }
 
     @And("^Enter (.+) emaill$")
     public void writeEmaill(String email){
@@ -280,10 +243,6 @@ public void clickOButton()  {
 
     }
 
-    @When("^ScrollWeb$")
-    public void scrollwin(){
-        qaDemoPage.scrollWindow();
-    }
 
     @And("^Select hobbies$")
     public void clickOnHobbiesSports(){
@@ -323,10 +282,6 @@ public void clickOButton()  {
 
 //BROWSER WINDOW
 
-    @When("^Scroll 350$")
-    public void scroll3500(){
-        qaDemoPage.scrollWindow350();
-    }
 
     @And("^Click on Alerts, Frame and Windows$")
     public void clickOnAlertsFrameAndWindow(){
