@@ -21,7 +21,7 @@ public class QaDemoPage extends BasePage{
     private String clickOnAddLocator = "//button[@id='addNewRecordButton']";
     private String uploadAndDownloadLocator = "//span[contains(text(),'Upload and Download')]";
     private String uploadFileLocator = "//input[@id='uploadFile']";
-    private String formsButtonLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/span[1]/div[1]/div[2]/div[2]/*[1]";
+    private String formsButtonLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[2]";
     private String practiceFromButtonLocator = "//span[contains(text(),'Practice Form')]";
     private String genderMaleLocator = "//label[contains(text(),'Male')]";
     private String hobbiesSportLocator = "//label[contains(text(),'Sports')]";
@@ -30,7 +30,7 @@ public class QaDemoPage extends BasePage{
     private String clickCityLocator = "//div[contains(text(),'Karnal')]";
 
     //ALERTS, FRAME AND WINDOWS - BROWSER WINDOWS
-    private String alertsFrameAndWindowLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/span[1]/div[1]/div[1]";
+    private String alertsFrameAndWindowLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[3]";
     private String browserWindowLocator = "//span[contains(text(),'Browser Windows')]";
     private String newTabLocator = "//button[@id='tabButton']";
     private String newWindowLocator = "//button[@id='windowButton']";
@@ -49,7 +49,7 @@ public class QaDemoPage extends BasePage{
     private String iFrame2byID = "//iframe[@id='frame2']";
 
     //WIDGETS, ACCORDIAN
-    private String widgetsButtonLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/span[1]/div[1]";
+    private String widgetsButtonLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[4]";
     private String accordianButtonLocator = "//span[contains(text(),'Accordian')]";
     private String whatIsLoremIpsumButtonLocator = "//div[@id='section1Heading']";
     private String whereDoesItComeFromLocator = "//div[@id='section2Heading']";

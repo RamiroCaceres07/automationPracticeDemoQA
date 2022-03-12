@@ -78,17 +78,18 @@
   When Scroll Web
   And Click on Forms
   When Click on Practice From
-  And Enter <name> name
-  And Enter <lastName> Last Name
-  And Enter <email> emaill
+  And Enter <name> first name
+  And Enter <lastName> last name
+  And Enter <email> email
   When Select gender
   And Write <userNumber> user number
   When Write <dateOfBirth> date of brith
   And Write <subjects> subjects
-  When ScrollWeb
+  When Scroll Web
   And Select hobbies
   When Upload file form
   And Write <currentAddress> current address
+  And Scroll Web
   When Select state
   And Select city
   Then Click on Sumbit
@@ -103,7 +104,6 @@
 @BrowserWindows
 Scenario: As Test Engineer, im test windows with selenium
 
-  When Scroll Web
   And Click on Alerts, Frame and Windows
   When Click on Browser Windows
   And Click on New Tab and switch to tab

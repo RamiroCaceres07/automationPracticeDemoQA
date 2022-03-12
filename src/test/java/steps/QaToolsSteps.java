@@ -207,17 +207,6 @@ public void clickOButton()  {
         qaDemoPage.clickOnPracticeForm();
     }
 
-    @And("^Enter (.+) name$")
-    public void writeName(String name){
-        qaDemoPage.writeNameVar(name);
-    }
-
-
-    @And("^Enter (.+) emaill$")
-    public void writeEmaill(String email){
-        qaDemoPage.writeEmail(email);
-    }
-
     @When("^Select gender$")
     public void selectGender(){
         qaDemoPage.clickOnGenderMale();
