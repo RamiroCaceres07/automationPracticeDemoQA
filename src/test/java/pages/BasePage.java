@@ -50,30 +50,30 @@ public class BasePage {
         driver.quit();
     }
 
-    public static void closeTabAndWindowDriver(){driver.close();}
+    public void closeTabAndWindowDriver(){driver.close();}
 
-    public static void navigateTo(String url) {
+    public void navigateTo(String url) {
         driver.get(url);
     }
 
-    public static void clickElement(String locator) {
+    public void clickElement(String locator) {
         find(locator).click();
     }
 
-    public static void doubleClickElement(String locator) {
+    public void doubleClickElement(String locator) {
         action.doubleClick(find(locator)).perform();
     }
 
-    public static void rightClickElement(String locator) {
+    public void rightClickElement(String locator) {
         action.contextClick(find(locator)).perform();
     }
 
-    public static void writeText(String locator, String textToWrite) {
+    public void writeText(String locator, String textToWrite) {
         find(locator).clear();
         find(locator).sendKeys(textToWrite);
     }
 
-    public static void writeEnter(String locator){
+    public void writeEnter(String locator){
         find(locator).sendKeys(Keys.RETURN);
     }
 
@@ -82,7 +82,7 @@ public class BasePage {
         return find(locator).getText();
     }
 
-    public static void selectDropdownByValue(String locator, String value) {
+    public void selectDropdownByValue(String locator, String value) {
         Select dropdown = new Select(find(locator));
         dropdown.selectByValue(value);
     }
@@ -95,7 +95,7 @@ public class BasePage {
         return find(locator).isDisplayed();
     }
 
-    public static void scrollWeb() {
+    public void scrollWeb() {
         js.executeScript("window.scrollBy(0,250)", "");
     }
 
@@ -104,20 +104,20 @@ public class BasePage {
         dropdown.selectByVisibleText(textToSelect);
     }
 
-    public static void swtichToTabByIndex(int tabN){
+    public void swtichToTabByIndex(int tabN){
         ArrayList <String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(tabN));}
 
-    public static void aceptAlert(){
+    public void aceptAlert(){
         driver.switchTo().alert().accept();;
     }
 
-    public static void sendKeysAndAccept(String textWrite){
+    public void sendKeysAndAccept(String textWrite){
         driver.switchTo().alert().sendKeys(textWrite);
         driver.switchTo().alert().accept();
     }
 
-    public static void switchToFrame(String locator){
+    public void switchToFrame(String locator){
         driver.switchTo().frame(locator);
     }
 

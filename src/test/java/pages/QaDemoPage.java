@@ -16,7 +16,6 @@ public class QaDemoPage extends BasePage{
     private String rightClickOnButtonLocator = "//button[@id='rightClickBtn']";
     private String simpleClickOnButtonLocator = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]/button[1]";
     private String yesSelectorInRadioButtonLocator = "//label[contains(text(),'Yes')]";
-    private String impressiveSelectorInRadioButtonLocator = "//label[contains(text(),'Impressive')]";
     private String sumbitLocator = "//button[@id='submit']";
     private String clickOnAddLocator = "//button[@id='addNewRecordButton']";
     private String uploadAndDownloadLocator = "//span[contains(text(),'Upload and Download')]";
@@ -51,7 +50,6 @@ public class QaDemoPage extends BasePage{
     //WIDGETS, ACCORDIAN
     private String widgetsButtonLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[4]";
     private String accordianButtonLocator = "//span[contains(text(),'Accordian')]";
-    private String whatIsLoremIpsumButtonLocator = "//div[@id='section1Heading']";
     private String whereDoesItComeFromLocator = "//div[@id='section2Heading']";
     private String whyDoWeUseItLocator = "//div[@id='section3Heading']";
 
@@ -147,6 +145,7 @@ public class QaDemoPage extends BasePage{
     }
 
     public void clickOnImpressiveInRadioButton(){
+        String impressiveSelectorInRadioButtonLocator = "//label[contains(text(),'Impressive')]";
         clickElement(impressiveSelectorInRadioButtonLocator);
     }
 
@@ -210,7 +209,9 @@ public class QaDemoPage extends BasePage{
 
     public void clickOnAccordian(){clickElement(accordianButtonLocator);}
 
-    public void clickOnWhatIsLoremIpsum(){clickElement(whatIsLoremIpsumButtonLocator);}
+    public void clickOnWhatIsLoremIpsum(){
+        String whatIsLoremIpsumButtonLocator = "//div[@id='section1Heading']";
+        clickElement(whatIsLoremIpsumButtonLocator);}
 
     public void clickOnWhereDoesItComeFrom(){clickElement(whereDoesItComeFromLocator);}
 
