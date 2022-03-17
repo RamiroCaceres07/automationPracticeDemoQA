@@ -1,6 +1,6 @@
 package pages;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,18 +9,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
+
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class BasePage {
+
     protected static WebDriver driver;
     protected static WebDriverWait wait;
     protected static Actions action;
     protected static JavascriptExecutor js;
-
 
     static {
         System.setProperty("webdriver.chrome.driver", "/Users/ramirocaceres/AutomationDriver/chromedriver");
@@ -99,9 +99,6 @@ public class BasePage {
         js.executeScript("window.scrollBy(0,250)", "");
     }
 
-
-
-
     public void selectFromDropdownByText(String locator, String textToSelect) {
         Select dropdown = new Select(find(locator));
         dropdown.selectByVisibleText(textToSelect);
@@ -123,4 +120,5 @@ public class BasePage {
     public static void switchToFrame(String locator){
         driver.switchTo().frame(locator);
     }
+
 }

@@ -57,8 +57,27 @@ public class QaDemoPage extends BasePage{
 
     //WIDGETS, AUTO COMPLETE
     private String autoCompleteButtonLocator = "//span[contains(text(),'Auto Complete')]";
-    private String typeMultipleColorLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]";
+    private String typeMultipleColorLocator = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]";
     private String typeSingleColorLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]";
+
+    //WIDGETS, DATA PICKER
+    private String dataPickerButtonLocator = "//span[contains(text(),'Date Picker')]";
+    private String selectDateLocator = "//input[@id='datePickerMonthYearInput']";
+
+    private String monthDropdownOfSelectDateLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/select[1]";
+    private String yearDropdownOfSelectDateLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/select[1]";
+    private String dayOfSelectDateLocator = "//div[contains(text(),'24')]";
+
+    private String selectDateAndTimeLocator = "//input[@id='dateAndTimePickerInput']";
+    private String monthClickOnsSelectDateAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/span[1]";
+    private String aprilMonthClickOnDateAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[5]";
+    private String yearClickOnSelectDateAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/span[1]";
+    private String year2019ClickOnDateAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[10]";
+    private String hourClickOnSelectAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]";
+    private String dayClickOnSelectDateAndTimeLocator = "//div[contains(text(),'30')]";
+
+
+
 
     //Writers locators
     private String fullNameLocator = "//input[@id='userName']";
@@ -201,6 +220,23 @@ public class QaDemoPage extends BasePage{
 
     public void clickOnTypeMultiplesColors(){clickElement(typeMultipleColorLocator);}
 
+    //WIDGETS, DATA PICKER
+    public void clickOnDataPicker(){clickElement(dataPickerButtonLocator);}
+
+    public void clickOnSelectDate(){clickElement(selectDateLocator);}
+    public void monthOnDropdownOfSelectDate(String month){selectFromDropdownByText(monthDropdownOfSelectDateLocator, month);}
+    public void yearOnDropdownOfSelectDate(String year){selectFromDropdownByText(yearDropdownOfSelectDateLocator, year);}
+    public void clickOnDayOfSelectDate(){clickElement(dayOfSelectDateLocator);}
+
+    public void clickOnDateAndTime(){clickElement(selectDateAndTimeLocator);}
+    public void clickOnMonthOnDateAndTime(){clickElement(monthClickOnsSelectDateAndTimeLocator);}
+    public void clickOnAprilOnDateAndtime(){clickElement(aprilMonthClickOnDateAndTimeLocator);}
+    public void clickOnYearOnDateAndTime(){clickElement(yearClickOnSelectDateAndTimeLocator);}
+    public void clickOn2019YearOnDateAndTime(){clickElement(year2019ClickOnDateAndTimeLocator);}
+    public void clickOnHourOnDateAndTime(){clickElement(hourClickOnSelectAndTimeLocator);}
+    public void clickOnDayNumberOnDateAndTime(){clickElement(dayClickOnSelectDateAndTimeLocator);}
+
+
 
     //Write Methods
     public void writeFullName(String name){
@@ -260,7 +296,7 @@ public class QaDemoPage extends BasePage{
     public void pressEnterOnSingleColor(){writeEnter(typeSingleColorLocator);}
 
 
-    //Checkers Methods
+
     public Boolean isDisplayedList(){
         return elementIsDisplayed(isDiplayedLocator);
     }

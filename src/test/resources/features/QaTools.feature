@@ -7,7 +7,7 @@
       When Scroll Web
 
    @WebTables
-   Scenario: As Test Engineer, test web tables
+   Scenario: As Test Automation, I test Web Tables on Elements
 
      And Click on Elements
      When Scroll Web
@@ -24,7 +24,7 @@
      Then Check if the info add on the table
 
    @TextBox
-    Scenario Outline: As Tester Engineer, i test TextBox funcionality
+    Scenario Outline: As Tester Automation, I test TextBox funcionality on Elements
       And Click on Elements
       When Click on TextBox button
       And Enter <name> fullname
@@ -32,7 +32,7 @@
       And Enter <currentAddress> current address
       And Enter <permanentAddress> permanent address
       When Scroll Web
-      And Click on Sumbit and check information
+      And Click in Sumbit and check information
       Then Check is displayed
 
       Examples:
@@ -43,7 +43,7 @@
      |123123|12321fdsf3@dsada.com    |12321312|12312312|
 
  @RadioButton
- Scenario: As Test Engineer, test radio button funcionality
+ Scenario: As Test Automation, I test Radio Button funcionality on Elements
    When Click on Elements
    And Click on Radio Button
    When Click on yes selector
@@ -53,7 +53,7 @@
    Then Check is impressive is selected
 
 @Buttons
-   Scenario: As Test Engineer, test button funcionality
+   Scenario: As Test Automation, I test Buttons funcionality on Elements
   When Click on Elements
   And Scroll Web
   And Click on Buttons
@@ -64,7 +64,7 @@
   Then Check if its done
 
 @UploadAndDownload
-    Scenario: As Test Engineer, test upload and download funcionality
+    Scenario: As Test Automation, I test Upload and Download funcionality on Elements
   And Click on Elements
   When Scroll Web
   And Scroll Web
@@ -73,8 +73,7 @@
 
 
 @Forms
-    Scenario Outline: As Test Engineer, test dynamic properties funcionality
-
+    Scenario Outline: As Test Automation, I Practice Forms funcionality on Forms
   When Scroll Web
   And Click on Forms
   When Click on Practice From
@@ -102,8 +101,7 @@
 
 
 @BrowserWindows
-Scenario: As Test Engineer, im test windows with selenium
-
+Scenario: As Test Automation, I test Browser Windows on Alerts, Frame and Windows
   And Click on Alerts, Frame and Windows
   When Click on Browser Windows
   And Click on New Tab and switch to tab
@@ -114,8 +112,7 @@ Scenario: As Test Engineer, im test windows with selenium
   When Close New Window Message
 
 @Alerts
-Scenario Outline: As Test Engineer, test alerts with selenium
-
+Scenario Outline: As Test Automation, I test Alerts on Alerts, Frame and Windows
   And Click on Alerts, Frame and Windows
   And Click on Alerts
   When Click button to see alert
@@ -133,8 +130,7 @@ Scenario Outline: As Test Engineer, test alerts with selenium
   |Bianca|
 
 @iFrame
-
-  Scenario: As Test Engineer, test iframe funcionality
+  Scenario: As Test Automation, I test iFrame funcionality on Alerts, Frame and Windows.
 
     And Click on Alerts, Frame and Windows
     And Click on Frames
@@ -142,8 +138,7 @@ Scenario Outline: As Test Engineer, test alerts with selenium
 
 
 @Accordian
-
-  Scenario: As Test Engineer, test acoordian funcionality
+  Scenario: As Test Automation, I test Ccoordian funcionality on Widgets.
 
   When Scroll Web
   And Click on Widgets
@@ -154,8 +149,7 @@ Scenario Outline: As Test Engineer, test alerts with selenium
   When Click on Why do we use it
 
 @AutoComplete
-
-  Scenario Outline: As Test Engineer, test AutoComplete funcionality
+  Scenario Outline: As Test Automation, I test AutoComplete funcionality on Widgets
 
   When Scroll Web
   And Click on Widgets
@@ -166,5 +160,20 @@ Scenario Outline: As Test Engineer, test alerts with selenium
   Examples:
     |color|
     |Black|
+
+
+@DataPicker
+  Scenario: As Test Automation, I test Data Picker funcionality on Widgets
+
+  When Scroll Web
+  And Click on Widgets
+  When Click on Data Picker
+  And Click on Select Date
+  When Complete select date entering 2000 year, April month and day
+  And Click on Date and Time
+  When Complete Date and Time camp entering year, month, day and hour
+  Then Check that info enter be correct
+
+
 
 

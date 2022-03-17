@@ -27,6 +27,11 @@ public class QaToolsSteps {
         Thread.sleep(1000);
     }
 
+    @When("^Scroll Web$")
+    public void scrollWeb(){
+        qaDemoPage.scrollWindow();
+    }
+
     @And("^Click on Web Tables$")
     public void clickOnWebTables(){
         qaDemoPage.clickOnWebTablesButton();
@@ -101,7 +106,7 @@ public class QaToolsSteps {
         qaDemoPage.writePermanentAddress(permanentAddress);
     }
 
-    @And("^Click on Sumbit and check information$")
+    @And("^Click in Sumbit and check information$")
     public void clickOnSumbit() throws InterruptedException {
         sleep(1000);
         qaDemoPage.clickOnSumbit();
@@ -179,10 +184,6 @@ public void clickOButton()  {
 
 //@UploadAndDownload
 
-    @When("^Scroll Web$")
-    public void scroll350(){
-        qaDemoPage.scrollWindow();
-    }
 
     @And("^Click on Upload and Download$")
     public void clickOnUploadAndDownload(){
@@ -408,7 +409,7 @@ public void clickOButton()  {
         qaDemoPage.clickOnWhyDoUseIt();
     }
 
-//@WidgetsAutoComplete
+//@Widgets - AutoComplete
 
     @When("^Click on Auto Complete$")
     public void clickOnAutoComplete(){
@@ -430,6 +431,55 @@ public void clickOButton()  {
         qaDemoPage.typeSingleColor(color);
         qaDemoPage.pressEnterOnSingleColor();
     }
+
+
+//@Widgets - Data Picker
+
+    @When("^Click on Data Picker$")
+    public void clickOnDataPicker(){
+        qaDemoPage.clickOnDataPicker();
+    }
+
+    @And("^Click on Select Date$")
+    public void clickOnSelectDate()  {
+        qaDemoPage.clickOnSelectDate();
+    }
+
+    @When("^Complete select date entering (.+) year, (.+) month and day$")
+    public void completeSelectDateEnteringYearMonthAndYear(String year, String month)  {
+        qaDemoPage.yearOnDropdownOfSelectDate(year);
+        qaDemoPage.monthOnDropdownOfSelectDate(month);
+        qaDemoPage.clickOnDayOfSelectDate();
+    }
+
+    @And("^Click on Date and Time$")
+    public void clickOnDateAndTime()  {
+        qaDemoPage.clickOnDateAndTime();
+    }
+
+    @When("^Complete Date and Time camp entering year, month, day and hour$")
+    public void completeDateAndTimeCampEnteringYearMonthDayAndHour(){
+        qaDemoPage.clickOnDateAndTime();
+        qaDemoPage.clickOnMonthOnDateAndTime();
+        qaDemoPage.clickOnAprilOnDateAndtime();
+        qaDemoPage.clickOnYearOnDateAndTime();
+        qaDemoPage.clickOn2019YearOnDateAndTime();
+        qaDemoPage.clickOnDayNumberOnDateAndTime();
+        qaDemoPage.clickOnHourOnDateAndTime();
+    }
+
+
+    @Then("^Check that info enter be correct$")
+    public void checkThatInfoEnterBeCorrect()  {
+
+    }
+
+
+
+
+
+
+
 
 
 

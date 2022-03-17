@@ -1,82 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test QaTools.com" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-11T13:30:18" hostname="192.168.1.45" time="19.431">
+<testsuite name="Test QaTools.com" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-17T18:07:22" hostname="air-de-ramiro" time="5.898">
   <properties/>
-  <testcase name="As Test Engineer, test AutoComplete funcionality" classname="Test QaTools.com" time="19.431">
-    <failure message="org.openqa.selenium.NoSuchWindowException: no such window: window was already closed&#10;  (Session info: chrome=99.0.4844.51)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: '192.168.1.45', ip: 'fe80:0:0:0:1ca0:7f6b:4b80:4770%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d8cfb8dd45d7f3d066339216b3058163, executeScript {script=window.scrollBy(0,250), args=[]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/h_/83z9w6ss29l...}, goog:chromeOptions: {debuggerAddress: localhost:49353}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49353/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d8cfb8dd45d7f3d066339216b3058163" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
-  (Session info: chrome=99.0.4844.51)
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: '192.168.1.45', ip: 'fe80:0:0:0:1ca0:7f6b:4b80:4770%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d8cfb8dd45d7f3d066339216b3058163, executeScript {script=window.scrollBy(0,250), args=[]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/h_/83z9w6ss29l...}, goog:chromeOptions: {debuggerAddress: localhost:49353}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49353/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d8cfb8dd45d7f3d066339216b3058163
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:492)
-	at pages.BasePage.scrollWeb(BasePage.java:101)
-	at pages.QaDemoPage.scrollWindow(QaDemoPage.java:99)
-	at steps.QaToolsSteps.scrollWindow(QaToolsSteps.java:25)
-	at ✽.Scroll Window(file:///Users/ramirocaceres/IdeaProjects/Automation/src/test/resources/features/QaTools.feature:7)
-</failure>
-  </testcase>
+  <testcase name="As Test Automation, I test iFrame funcionality on Alerts, Frame and Windows." classname="Test QaTools.com" time="5.898"/>
   <system-out><![CDATA[
-@QaToolsText @AutoComplete
-Scenario Outline: As Test Engineer, test AutoComplete funcionality # src/test/resources/features/QaTools.feature:160
-  Given I navigate to QaTools.com                                  # steps.QaToolsSteps.navigateToQaTools()
-  When Scroll Window                                               # steps.QaToolsSteps.scrollWindow()
-      org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
-  (Session info: chrome=99.0.4844.51)
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: '192.168.1.45', ip: 'fe80:0:0:0:1ca0:7f6b:4b80:4770%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d8cfb8dd45d7f3d066339216b3058163, executeScript {script=window.scrollBy(0,250), args=[]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/h_/83z9w6ss29l...}, goog:chromeOptions: {debuggerAddress: localhost:49353}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:49353/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d8cfb8dd45d7f3d066339216b3058163
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:492)
-	at pages.BasePage.scrollWeb(BasePage.java:101)
-	at pages.QaDemoPage.scrollWindow(QaDemoPage.java:99)
-	at steps.QaToolsSteps.scrollWindow(QaToolsSteps.java:25)
-	at ✽.Scroll Window(file:///Users/ramirocaceres/IdeaProjects/Automation/src/test/resources/features/QaTools.feature:7)
-
-  And Click on Elements                                            # steps.QaToolsSteps.clickOnElements()
-  When Scroll to Web Tables                                        # steps.QaToolsSteps.scrollWebTables()
-  When Scroll Web 350                                              # steps.QaToolsSteps.scroll350()
-  And Click on Widgets                                             # steps.QaToolsSteps.clickOnWidgets()
-  When Click on Auto Complete                                      # steps.QaToolsSteps.clickOnAutoComplete()
-  And Write colors on Type Multiple color names and press Enter    # steps.QaToolsSteps.writeColorOnTypeMultipleColorNameAndPressEnter()
-  And Write Black on Type single color name and press Enter        # steps.QaToolsSteps.writeColorOnTypeSingleColorAndPressEnter(java.lang.String)
+@QaToolsText @iFrame
+Scenario: As Test Automation, I test iFrame funcionality on Alerts, Frame and Windows. # src/test/resources/features/QaTools.feature:133
+  Given I navigate to QaTools.com                                                      # steps.QaToolsSteps.navigateToQaTools()
+  When Scroll Web                                                                      # steps.QaToolsSteps.scrollWeb()
+  And Click on Alerts, Frame and Windows                                               # steps.QaToolsSteps.clickOnAlertsFrameAndWindow()
+  And Click on Frames                                                                  # steps.QaToolsSteps.clickOnFrameButton()
+  When Switch to 1 Frame                                                               # steps.QaToolsSteps.switchTo1Frame()
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 49205
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 54421
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 11, 2022 10:30:23 A.M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-mar. 11, 2022 10:30:23 A.M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-mar. 11, 2022 10:30:23 A.M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Found CDP implementation for version 99 of 97
+mar. 17, 2022 3:07:23 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACI?N: Detected dialect: W3C
+mar. 17, 2022 3:07:23 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
+mar. 17, 2022 3:07:23 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFORMACI?N: Found CDP implementation for version 99 of 97
 ]]></system-err>
 </testsuite>
