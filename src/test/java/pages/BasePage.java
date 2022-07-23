@@ -9,19 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 import java.time.Duration;
 import java.util.ArrayList;
 
-
-
 public class BasePage {
-
     protected static WebDriver driver;
     protected static WebDriverWait wait;
     protected static Actions action;
     protected static JavascriptExecutor js;
-
     static {
         System.setProperty("webdriver.chrome.driver", "/Users/ramirocaceres/AutomationDriver/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -40,11 +35,6 @@ public class BasePage {
     private static WebElement find(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
-
-    private static WebElement findByCss(String locator){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
-    }
-
 
     public static void closeDriver() {
         driver.quit();
@@ -76,8 +66,7 @@ public class BasePage {
     public void writeEnter(String locator){
         find(locator).sendKeys(Keys.RETURN);
     }
-
-
+    
     public String getTextFromElement(String locator) {
         return find(locator).getText();
     }
@@ -87,7 +76,7 @@ public class BasePage {
         dropdown.selectByValue(value);
     }
 
-    public boolean isSelected(String locator) {
+    public boolean isSeleeected(String locator) {
         return find(locator).isSelected();
     }
 
@@ -95,7 +84,7 @@ public class BasePage {
         return find(locator).isDisplayed();
     }
 
-    public void scrollWeb() {
+    public void scrollllWeb() {
         js.executeScript("window.scrollBy(0,250)", "");
     }
 
@@ -120,5 +109,7 @@ public class BasePage {
     public void switchToFrame(String locator){
         driver.switchTo().frame(locator);
     }
+
+    public void sliderAction(String locator, int horizontal, int vertical){action.dragAndDropBy(find(locator), horizontal, vertical).perform();}
 
 }

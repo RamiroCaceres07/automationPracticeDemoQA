@@ -62,6 +62,12 @@ public class QaDemoPage extends BasePage{
     private String dataPickerButtonLocator = "//span[contains(text(),'Date Picker')]";
     private String selectDateLocator = "//input[@id='datePickerMonthYearInput']";
 
+    //WADGETS, SLIDER
+    private String sliderButtonLocator = "//span[contains(text(),'Slider')]";
+    private String sliderBarLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/span[1]/input[1]";
+
+
+
     private String monthDropdownOfSelectDateLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/select[1]";
     private String yearDropdownOfSelectDateLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/select[1]";
     private String dayOfSelectDateLocator = "//div[contains(text(),'24')]";
@@ -110,10 +116,11 @@ public class QaDemoPage extends BasePage{
 
     public void switchToTab(int numTab) {swtichToTabByIndex(numTab);}
 
+
     public void closeTabAndWindow(){closeTabAndWindowDriver();}
 
     public void scrollWindow(){
-        scrollWeb();
+        scrollllWeb();
     }
 
 
@@ -123,7 +130,7 @@ public class QaDemoPage extends BasePage{
 
     public void switchToiFrame(){switchToFrame(iFrame1byID);}
 
-    //ClickOn Methods
+    //Click Methods
     public void clickOnElementsButton(){
         clickElement(elementsLocator);
     }
@@ -236,6 +243,10 @@ public class QaDemoPage extends BasePage{
     public void clickOn2019YearOnDateAndTime(){clickElement(year2019ClickOnDateAndTimeLocator);}
     public void clickOnHourOnDateAndTime(){clickElement(hourClickOnSelectAndTimeLocator);}
     public void clickOnDayNumberOnDateAndTime(){clickElement(dayClickOnSelectDateAndTimeLocator);}
+
+    //WIDGETS, SLIDER
+    public void clickOnSliderLocator(){clickElement(sliderButtonLocator);}
+    public void clickOnSliderBar(int horizontal, int vertical){sliderAction("//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/span[1]/input[1]", horizontal, vertical );}
 
 
 

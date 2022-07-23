@@ -99,7 +99,6 @@
   |name|lastName|email|userNumber|dateOfBirth|subjects|currentAddress|
   |Ramiro|Caceres|ramirocaba99@gmail.com|0932131|20 nov 1999|Hindi|ddsadasd|
 
-
 @BrowserWindows
 Scenario: As Test Automation, I test Browser Windows on Alerts, Frame and Windows
   And Click on Alerts, Frame and Windows
@@ -136,7 +135,6 @@ Scenario Outline: As Test Automation, I test Alerts on Alerts, Frame and Windows
     And Click on Frames
     When Switch to 1 Frame
 
-
 @Accordian
   Scenario: As Test Automation, I test Ccoordian funcionality on Widgets.
 
@@ -161,10 +159,8 @@ Scenario Outline: As Test Automation, I test Alerts on Alerts, Frame and Windows
     |color|
     |Black|
 
-
 @DataPicker
   Scenario: As Test Automation, I test Data Picker funcionality on Widgets
-
   When Scroll Web
   And Click on Widgets
   When Click on Data Picker
@@ -173,6 +169,16 @@ Scenario Outline: As Test Automation, I test Alerts on Alerts, Frame and Windows
   And Click on Date and Time
   When Complete Date and Time camp entering year, month, day and hour
   Then Check that info enter be correct
+
+@Slider
+  Scenario: As Test Automation, I test Slider funcionality on Widgets
+  When Scroll Web
+  And Click on Widgets
+  When Click on Slider
+  And Click and Press on Slider 150 and 0
+
+
+
 
 
 

@@ -20,7 +20,6 @@ public class QaToolsSteps {
         qaDemoPage.navigateToQaTools();
     }
 
-
     @And("^Click on Elements$")
     public void clickOnElements() throws InterruptedException {
         qaDemoPage.clickOnElementsButton();
@@ -183,7 +182,6 @@ public void clickOButton()  {
 
 
 //@UploadAndDownload
-
 
     @And("^Click on Upload and Download$")
     public void clickOnUploadAndDownload(){
@@ -474,6 +472,18 @@ public void clickOButton()  {
 
     }
 
+//WIDGETS - SLIDER
+
+    @When("^Click on Slider$")
+    public void clickOnSlider(){
+        qaDemoPage.clickOnSliderLocator();
+    }
+
+    @And("^Click and Press on Slider (.+) and (.+)$")
+    public void clickOnSliderBar(int horizontal, int vertical) throws Exception  {
+        Thread.sleep(1000);
+        qaDemoPage.clickOnSliderBar(horizontal, vertical);
+    }
 
 
 
