@@ -66,8 +66,6 @@ public class QaDemoPage extends BasePage{
     private String sliderButtonLocator = "//span[contains(text(),'Slider')]";
     private String sliderBarLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/span[1]/input[1]";
 
-
-
     private String monthDropdownOfSelectDateLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/select[1]";
     private String yearDropdownOfSelectDateLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/select[1]";
     private String dayOfSelectDateLocator = "//div[contains(text(),'24')]";
@@ -79,9 +77,6 @@ public class QaDemoPage extends BasePage{
     private String year2019ClickOnDateAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[10]";
     private String hourClickOnSelectAndTimeLocator = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]";
     private String dayClickOnSelectDateAndTimeLocator = "//div[contains(text(),'30')]";
-
-
-
 
     //Writers locators
     private String fullNameLocator = "//input[@id='userName']";
@@ -124,7 +119,7 @@ public class QaDemoPage extends BasePage{
     }
 
 
-    public void acceptAlert(){aceptAlert();};
+    public void acceptAlert(){aceptAlert();}
 
     public void writeAlertAndAccept(String textWrite){sendKeysAndAccept(textWrite);}
 
